@@ -3,133 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Workshop 2 — Materials, Polymers and Formulations for Health and Environment | MRISE Lab</title>
-<meta name="description" content="Workshop 2 — Materials, polymers and formulations for health and the environment. MRISE Lab, University of Ain Temouchent Belhadj Bouchaib. Thursday 3 December 2026.">
-<link rel="icon" href="assets/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Workshop 2 — Materials, Polymers and Formulations for Health and Environment</title>
+<meta name="description" content="Workshop 2 — Materials, polymers and formulations for health and the environment. University of Ain Temouchent Belhadj Bouchaib, Thursday 3 December 2026.">
+<link rel="icon" href="assets/univ-temouchent.png">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F6F7FB;--panel:#fff;--panel-alt:#EFF2FA;--violet:#6F4CE0;--cyan:#0EA5B7;--amber:#C97F12;--text:#171D33;--muted:#4E5872;--dim:#838DA8;--border:rgba(23,29,51,.09);--border2:rgba(23,29,51,.18);--r:14px;--sh:0 10px 30px rgba(23,29,51,.07),0 2px 8px rgba(23,29,51,.04);--display:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'IBM Plex Mono',monospace}
+:root{--ink:#06201E;--forest:#0D3B38;--teal:#14A89A;--mint:#9FE8D8;--copper:#E2793C;--sand:#FBF7EE;--sand2:#F2EBDB;--text:#13211F;--muted:#4C5E5B;--line:rgba(19,33,31,.12);--r:18px;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(circle at 15% 8%,rgba(111,76,224,.09),transparent 40%),radial-gradient(circle at 88% 18%,rgba(14,165,183,.08),transparent 42%)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--sand);color:var(--text);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}ul{list-style:none}img{max-width:100%;display:block}
-h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.01em}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:18px;height:1px;background:var(--cyan)}
-header{position:sticky;top:0;z-index:50;background:rgba(246,247,251,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:12px 24px;max-width:1100px;margin:0 auto}
-.logos{display:flex;align-items:center;gap:12px}
-.logos img{height:50px;width:50px;border-radius:10px;object-fit:contain;background:#fff;box-shadow:var(--sh)}
-.logos .sep{width:1px;height:34px;background:var(--border2)}
-.navr{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.navr a.back{font-size:13.5px;font-weight:500;color:var(--muted)}.navr a.back:hover{color:var(--violet)}
-.lang{display:flex;gap:2px;background:var(--panel-alt);border-radius:999px;padding:3px}
-.lang button{font-family:var(--mono);font-size:11.5px;font-weight:600;border:0;background:transparent;color:var(--dim);padding:6px 11px;border-radius:999px;cursor:pointer}
-.lang button.active{background:var(--violet);color:#fff}
-.hero{padding:70px 0 40px}
-.badge2{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:600;color:#fff;background:linear-gradient(100deg,var(--cyan),var(--violet));padding:5px 14px;border-radius:999px;margin-bottom:18px}
-.hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.1;max-width:860px;margin:14px 0 18px}
-.hero h1 .acc{background:linear-gradient(100deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lede{color:var(--muted);font-size:16.5px;max-width:640px;margin-bottom:26px}
-.meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
-.chip{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 18px;box-shadow:0 1px 2px rgba(23,29,51,.04)}
-.chip small{display:block;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
-.chip b{font-family:var(--display);font-size:15px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:12px 22px;border-radius:10px;font-size:14.5px;font-weight:500;display:inline-block}
-.btn-p{background:var(--violet);color:#fff;box-shadow:var(--sh)}.btn-p:hover{background:#5c39d6}
-.btn-g{border:1px solid var(--border2);background:var(--panel)}.btn-g:hover{border-color:var(--cyan);color:var(--cyan)}
-section{padding:60px 0}
-.head{margin-bottom:34px}.head h2{font-size:clamp(24px,3vw,32px);margin-top:12px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.kicker{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--copper)}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(6,32,30,.92);backdrop-filter:blur(12px);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+nav{max-width:1120px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logos{display:flex;align-items:center;gap:10px}
+.logos img{height:46px;width:46px;object-fit:contain;background:#fff;border-radius:12px;padding:3px}
+.links{display:flex;gap:26px;align-items:center}
+.links a{color:rgba(255,255,255,.78);font-size:14px;font-weight:500}.links a:hover{color:var(--mint)}
+.lang{display:flex;background:rgba(255,255,255,.1);border-radius:999px;padding:3px}
+.lang button{border:0;background:none;color:rgba(255,255,255,.7);font:600 12px var(--sans);padding:6px 11px;border-radius:999px;cursor:pointer}
+.lang button.active{background:var(--copper);color:#fff}
+/* hero */
+.hero{position:relative;color:#fff;padding:150px 0 90px;background:radial-gradient(circle at 80% 10%,rgba(20,168,154,.35),transparent 45%),radial-gradient(circle at 5% 90%,rgba(226,121,60,.22),transparent 40%),linear-gradient(160deg,var(--ink),var(--forest));overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97'%3E%3Cpath d='M28 2 54 17v30L28 62 2 47V17zM28 62v30M2 47-24 62M54 47l26 15' fill='none' stroke='%239FE8D8' stroke-opacity='.13' stroke-width='1.2'/%3E%3C/svg%3E");mask-image:linear-gradient(120deg,transparent 20%,#000 90%);-webkit-mask-image:linear-gradient(120deg,transparent 20%,#000 90%)}
+.hero .wrap{position:relative}
+.tag{display:inline-flex;gap:8px;align-items:center;background:rgba(159,232,216,.12);border:1px solid rgba(159,232,216,.35);color:var(--mint);padding:6px 16px;border-radius:999px;font-size:12.5px;font-weight:600;letter-spacing:.12em}
+.hero h1{font-size:clamp(34px,5.6vw,66px);max-width:900px;margin:22px 0 20px;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--mint)}
+.hero .lede{font-size:18px;color:rgba(255,255,255,.78);max-width:640px;margin-bottom:34px}
+.facts{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 20px}
+.fact small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);font-weight:600}
+.fact b{font-family:var(--serif);font-size:19px;font-weight:600}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:46px}
+.btn{padding:14px 26px;border-radius:12px;font-weight:600;font-size:15px;border:0;cursor:pointer;font-family:var(--sans);transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-c{background:var(--copper);color:#fff}.btn-c:hover{background:#c9692f}
+.btn-o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}.btn-o:hover{border-color:var(--mint);color:var(--mint)}
+.count{display:flex;gap:12px}
+.count div{min-width:84px;text-align:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 8px}
+.count b{display:block;font-family:var(--serif);font-size:34px;line-height:1.1}
+.count span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+.over{font-family:var(--serif);font-size:20px;color:var(--mint)}
+/* sections */
+section{padding:84px 0}
+.head{max-width:680px;margin-bottom:44px}
+.head h2{font-size:clamp(28px,3.6vw,42px);margin-top:10px}
+.themes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.theme{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 22px;transition:transform .25s,box-shadow .25s}
+.theme:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(6,32,30,.1)}
+.ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--forest),var(--teal));display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.ico svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.theme h3{font-size:20px;margin-bottom:6px}.theme p{font-size:14px;color:var(--muted)}
+.alt{background:var(--sand2)}
 .chairs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:0 1px 2px rgba(23,29,51,.04)}
-.card .role{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--violet)}
-.card h3{font-size:18px;margin:8px 0 4px}.card p{font-size:13.5px;color:var(--muted)}
-.card.hl{border-color:var(--violet);background:linear-gradient(135deg,#fff,var(--panel-alt))}
-.tl{position:relative;border-left:2px solid var(--border2);margin-left:8px;padding-left:28px}
-.grp{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin:30px 0 14px;position:relative;font-weight:600}
-.grp:first-child{margin-top:0}
-.grp::before{content:"";position:absolute;left:-36px;top:3px;width:14px;height:14px;border-radius:50%;background:var(--amber);border:3px solid var(--bg)}
-.row{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:12px;position:relative;box-shadow:0 1px 2px rgba(23,29,51,.04)}
-.row::before{content:"";position:absolute;left:-35px;top:24px;width:10px;height:10px;border-radius:50%;background:var(--cyan)}
-.row.pause{background:var(--panel-alt);border-style:dashed}.row.pause::before{background:var(--dim)}
-.time{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--cyan)}
-.row h3{font-size:16.5px;margin:3px 0}
-.row ul{margin-top:8px}.row li{font-size:14px;color:var(--muted);padding-left:16px;position:relative;margin-bottom:4px}
-.row li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--violet)}
-.com{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.com .card h3{font-size:20px;margin:0 0 14px}
-.com li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
-.com li:last-child{border:0}.com li span{font-family:var(--mono);font-size:11.5px;color:var(--dim);white-space:nowrap}
-.contact{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:36px;box-shadow:var(--sh);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
-.contact h3{font-size:22px;margin-bottom:6px}.contact p{color:var(--muted);font-size:14.5px}
-footer{border-top:1px solid var(--border);padding:30px 0;text-align:center;font-size:12.5px;color:var(--dim);position:relative;z-index:1}
-html[lang="ar"] body,html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{font-family:'Cairo',var(--body)}
-html[dir="rtl"] body{direction:rtl}
-html[dir="rtl"] .tl{border-left:0;border-right:2px solid var(--border2);margin-left:0;margin-right:8px;padding-left:0;padding-right:28px}
-html[dir="rtl"] .grp::before{left:auto;right:-36px}html[dir="rtl"] .row::before{left:auto;right:-35px}
-html[dir="rtl"] .row li{padding-left:0;padding-right:16px}html[dir="rtl"] .row li::before{left:auto;right:0}
-@media(max-width:820px){.chairs,.com{grid-template-columns:1fr}.logos img{height:42px;width:42px}}
+.chair{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;border-top:4px solid var(--teal)}
+.chair.hl{background:var(--forest);color:#fff;border-color:var(--copper);border-top-color:var(--copper)}
+.chair small{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--copper)}
+.chair.hl small{color:var(--mint)}
+.chair h3{font-size:21px;margin:10px 0 6px}.chair p{font-size:14px;color:var(--muted)}.chair.hl p{color:rgba(255,255,255,.75)}
+/* programme */
+.prog{display:grid;gap:12px}
+.grp{margin-top:26px;display:flex;align-items:center;gap:14px;font-family:var(--serif);font-size:22px;color:var(--forest)}
+.grp:first-child{margin-top:0}.grp::after{content:"";flex:1;height:1px;background:var(--line)}
+.grp i{font-style:normal;font-family:var(--sans);font-size:12px;font-weight:600;color:#fff;background:var(--copper);border-radius:999px;padding:3px 12px;letter-spacing:.1em}
+.row{display:grid;grid-template-columns:150px 1fr;gap:20px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;align-items:start}
+.row .t{font-weight:600;font-size:14px;color:var(--teal);font-variant-numeric:tabular-nums;padding-top:3px}
+.row h3{font-size:18px;font-family:var(--sans);font-weight:600}
+.row ul{margin-top:8px}.row li{font-size:14.5px;color:var(--muted);padding-inline-start:18px;position:relative;margin-bottom:4px}
+.row li::before{content:"";position:absolute;inset-inline-start:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--copper)}
+.row.pause{background:transparent;border-style:dashed}.row.pause h3{font-weight:500;color:var(--muted)}
+.partners{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+.partners span{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.06em;color:var(--forest);background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 34px}
+.coms{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.com{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.com h3{font-size:24px;margin-bottom:18px;padding-bottom:14px;border-bottom:2px solid var(--copper);display:inline-block}
+.com li{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.com li:last-child{border:0}
+.av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--teal));color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.com li em{font-style:normal;margin-inline-start:auto;font-size:12px;color:var(--muted);white-space:nowrap}
+.cta{background:linear-gradient(135deg,var(--forest),var(--ink));color:#fff;border-radius:26px;padding:54px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta h2{font-size:clamp(26px,3vw,36px);margin-bottom:8px}.cta p{color:rgba(255,255,255,.75);max-width:460px}
+footer{background:var(--ink);color:rgba(255,255,255,.65);padding:44px 0;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .logos img{height:52px;width:52px}
+footer a{color:var(--mint)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+html[lang="ar"] body,html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .btn,html[lang="ar"] .lang button{font-family:'Cairo',sans-serif}
+html[lang="ar"] .kicker,html[lang="ar"] .count span,html[lang="ar"] .fact small,html[lang="ar"] .chair small{letter-spacing:0}
+html[lang="ar"] .hero h1 em{font-style:normal}
+@media(max-width:900px){.links{display:none}.themes{grid-template-columns:1fr 1fr}.chairs,.coms{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.hero{padding-top:120px}.cta{padding:34px}}
+@media(max-width:520px){.themes{grid-template-columns:1fr}.count div{min-width:68px}.count b{font-size:26px}.logos img{height:38px;width:38px}}
 </style>
 </head>
 <body>
-<header><nav>
-  <div class="logos">
-    <img src="assets/univ-temouchent.png" alt="University of Ain Temouchent Belhadj Bouchaib">
-    <span class="sep"></span>
-    <img src="assets/logo.png" alt="MRISE Lab">
-  </div>
-  <div class="navr">
-    <a class="back" href="index.html" data-i="back"></a>
-    <div class="lang" id="lang"><button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="ar">AR</button></div>
-  </div>
+<header id="hd"><nav>
+  <div class="logos"><img src="assets/univ-temouchent.png" alt="University of Ain Temouchent"><img src="assets/logo.png" alt="MRISE Lab"></div>
+  <div class="links"><a href="#themes" data-i="thL"></a><a href="#programme" data-i="progH"></a><a href="#committees" data-i="comH"></a><a href="#contact" data-i="contact"></a><a href="index.html" data-i="back"></a></div>
+  <div class="lang" id="lang"><button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="ar">AR</button></div>
 </nav></header>
-
 <main>
-<section class="hero"><div class="wrap">
-  <span class="badge2" data-i="edition"></span><br>
-  <span class="eyebrow" data-i="eyebrow"></span>
+<div class="hero"><div class="wrap">
+  <span class="tag" data-i="edition"></span>
   <h1 data-ih="title"></h1>
   <p class="lede" data-i="lede"></p>
-  <div class="meta">
-    <div class="chip"><div><small data-i="dateL"></small><b data-i="date"></b></div></div>
-    <div class="chip"><div><small data-i="timeL"></small><b>08:30 – 15:00</b></div></div>
-    <div class="chip"><div><small data-i="placeL"></small><b data-i="place"></b></div></div>
+  <div class="facts">
+    <div class="fact"><small data-i="dateL"></small><b data-i="date"></b></div>
+    <div class="fact"><small data-i="timeL"></small><b>08:30 – 15:00</b></div>
+    <div class="fact"><small data-i="placeL"></small><b data-i="place"></b></div>
   </div>
-  <div class="btns"><a class="btn btn-p" href="#programme" data-i="btnProg"></a><a class="btn btn-g" href="#committees" data-i="btnCom"></a></div>
+  <div class="btns"><a class="btn btn-c" href="#programme" data-i="btnProg"></a><button class="btn btn-o" id="cal" data-i="cal"></button></div>
+  <div id="cd"></div>
+</div></div>
+
+<section id="themes"><div class="wrap">
+  <div class="head rv"><span class="kicker" data-i="thL"></span><h2 data-i="thH"></h2></div>
+  <div class="themes rv">
+    <div class="theme"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 4.3v8.4L12 20l-7.5-4.3V7.3z"/><path d="M12 12l7.5-4.3M12 12v8M12 12L4.5 7.7"/></svg></div><h3 data-i="th0"></h3><p data-i="td0"></p></div>
+    <div class="theme"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="5" cy="8" r="2.2"/><circle cx="12" cy="15" r="2.2"/><circle cx="19" cy="8" r="2.2"/><path d="M6.8 9.4l3.4 4.2M13.8 13.6l3.4-4.2"/></svg></div><h3 data-i="th1"></h3><p data-i="td1"></p></div>
+    <div class="theme"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></div><h3 data-i="th2"></h3><p data-i="td2"></p></div>
+    <div class="theme"><div class="ico"><svg viewBox="0 0 24 24"><path d="M20 4C10 4 4 10 4 18v2h2c8 0 14-6 14-16z"/><path d="M7 19c3-5 7-9 12-12"/></svg></div><h3 data-i="th3"></h3><p data-i="td3"></p></div>
+  </div>
 </div></section>
 
-<section><div class="wrap">
-  <div class="head"><span class="eyebrow" data-i="patL"></span><h2 data-i="patH"></h2></div>
-  <div class="chairs">
-    <div class="card"><span class="role" data-i="honor"></span><h3>Pr. ZIADI Abdelkader</h3><p data-i="rector"></p></div>
-    <div class="card"><span class="role" data-i="honor"></span><h3>Pr. FLITI Mohammed</h3><p data-i="dean"></p></div>
-    <div class="card hl"><span class="role" data-i="chair"></span><h3>Dr. BENNABI Lamia</h3><p data-i="director"></p></div>
+<section class="alt"><div class="wrap">
+  <div class="head rv"><span class="kicker" data-i="patL"></span><h2 data-i="patH"></h2></div>
+  <div class="chairs rv">
+    <div class="chair"><small data-i="honor"></small><h3>Pr. ZIADI Abdelkader</h3><p data-i="rector"></p></div>
+    <div class="chair"><small data-i="honor"></small><h3>Pr. FLITI Mohammed</h3><p data-i="dean"></p></div>
+    <div class="chair hl"><small data-i="chair"></small><h3>Dr. BENNABI Lamia</h3><p data-i="director"></p></div>
   </div>
 </div></section>
 
 <section id="programme"><div class="wrap">
-  <div class="head"><span class="eyebrow" data-i="progL"></span><h2 data-i="progH"></h2></div>
-  <div class="tl" id="tl"></div>
+  <div class="head rv"><span class="kicker" data-i="progL"></span><h2 data-i="progH"></h2></div>
+  <div class="prog rv" id="tl"></div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="head rv"><span class="kicker" data-i="partL"></span><h2 data-i="partH"></h2></div>
+  <div class="partners rv"><span>SONATRACH</span><span>CHIALI</span></div>
 </div></section>
 
 <section id="committees"><div class="wrap">
-  <div class="head"><span class="eyebrow" data-i="comL"></span><h2 data-i="comH"></h2></div>
-  <div class="com">
-    <div class="card"><h3 data-i="org"></h3><ul id="orgList"></ul></div>
-    <div class="card"><h3 data-i="sci"></h3><ul id="sciList"></ul></div>
+  <div class="head rv"><span class="kicker" data-i="comL"></span><h2 data-i="comH"></h2></div>
+  <div class="coms rv">
+    <div class="com"><h3 data-i="org"></h3><ul id="orgList"></ul></div>
+    <div class="com"><h3 data-i="sci"></h3><ul id="sciList"></ul></div>
   </div>
 </div></section>
 
-<section><div class="wrap"><div class="contact">
-  <div><h3>MRISE Lab</h3><p data-i="addr"></p></div>
-  <a class="btn btn-p" href="mailto:lamia.bennabi@univ-temouchent.edu.dz">lamia.bennabi@univ-temouchent.edu.dz</a>
+<section id="contact" style="padding-top:20px"><div class="wrap"><div class="cta rv">
+  <div><h2 data-i="ctaH"></h2><p data-i="ctaP"></p></div>
+  <a class="btn btn-c" href="mailto:lamia.bennabi@univ-temouchent.edu.dz">lamia.bennabi@univ-temouchent.edu.dz</a>
 </div></div></section>
 </main>
-
-<footer><div class="wrap">© <span id="y"></span> MRISE Lab — Université Belhadj Bouchaib, Ain Témouchent</div></footer>
+<footer><div class="wrap">
+  <div class="logos"><img src="assets/univ-temouchent.png" alt=""><img src="assets/logo.png" alt=""></div>
+  <div>© <span id="y"></span> MRISE Lab — Université Belhadj Bouchaib, Ain Témouchent<br><span data-i="addr"></span> · <a href="index.html" data-i="back"></a></div>
+</div></footer>
 
 <script>
 document.getElementById('y').textContent=new Date().getFullYear();
@@ -194,20 +231,46 @@ const PROG=[
 ];
 const ORG=[["Dr. SEDIRI Khaldia",""],["Dr. BELDJILLALI Mohamed","Univ_AT"],["Dr. FEKIH Nadia","Univ_AT"],["Dr. ALLAL Asma","Univ_AT"],["Dr. BENDIAF Houaria","Univ_AT"],["Dr. BENGRINE Asma","Univ_AT"],["Dr. NOUALI Fatiha","Univ_AT"],["Dr. ARGOUB Asmaa","Univ_AT"],["Dr. AYACHI Hicham",""]];
 const SCI=[["Pr. BAILICHE Zohra","Univ_AT"],["Pr. BERICHI Amina","Univ_AT"],["Pr. BENTOUT Soufiane","Univ_AT"],["Pr. MAROUF Hafida","Univ_AT"],["Pr. BENZENINE Hamidou","Univ_AT"],["Dr. CHAIBI Wahiba",""],["Dr. CHAIB Mohamed","Univ Oran"],["Dr. ADJAJ Azedine","Univ_AT"],["Dr. BAHRAM Kadour","Univ_AT"],["Dr. BELDJILLALI Mohamed","Univ_AT"],["Dr. BENYETTOU Fatma","Univ_AT"],["Dr. RAMDANI Nassima","Univ_AT"],["Dr. TABTI Affaf","Univ_AT"]];
-const li=a=>a.map(p=>`<li>${p[0]}<span>${p[1]}</span></li>`).join('');
+
+const X={
+en:{contact:"Contact",thL:"Four pillars",thH:"What the day is about",th0:"Materials",td0:"Innovative and high-performance materials",th1:"Polymers",td1:"Synthesis, formulation and characterization",th2:"Health",td2:"Biomedical and pharmaceutical applications",th3:"Environment",td3:"Sustainable solutions and valorization",partL:"With the participation of",partH:"Industry meets academia",cal:"Add to calendar",d:"Days",h:"Hours",m:"Min",s:"Sec",over:"This workshop has taken place.",ctaH:"Join us on 3 December",ctaP:"For information and participation, contact the organizing committee."},
+fr:{contact:"Contact",thL:"Quatre piliers",thH:"De quoi parle cette journée",th0:"Matériaux",td0:"Matériaux innovants et hautes performances",th1:"Polymères",td1:"Synthèse, formulation et caractérisation",th2:"Santé",td2:"Applications biomédicales et pharmaceutiques",th3:"Environnement",td3:"Solutions durables et valorisation",partL:"Avec la participation de",partH:"L'industrie rencontre l'université",cal:"Ajouter au calendrier",d:"Jours",h:"Heures",m:"Min",s:"Sec",over:"Ce workshop a eu lieu.",ctaH:"Rejoignez-nous le 3 décembre",ctaP:"Pour toute information ou participation, contactez le comité d'organisation."},
+ar:{contact:"اتصل بنا",thL:"أربعة محاور",thH:"موضوع هذا اليوم العلمي",th0:"المواد",td0:"مواد مبتكرة وعالية الأداء",th1:"البوليمرات",td1:"التركيب والصياغة والتوصيف",th2:"الصحة",td2:"التطبيقات الطبية الحيوية والصيدلانية",th3:"البيئة",td3:"حلول مستدامة وتثمين",partL:"بمشاركة",partH:"لقاء الصناعة بالجامعة",cal:"أضف إلى التقويم",d:"أيام",h:"ساعات",m:"دقائق",s:"ثوان",over:"انعقدت هذه الورشة.",ctaH:"انضموا إلينا في 3 ديسمبر",ctaP:"للاستفسار والمشاركة، تواصلوا مع اللجنة التنظيمية."}
+};
+for(const l in X)Object.assign(T[l],X[l]);
+const ini=n=>n.replace(/^(Dr|Pr)\.?\s+/,'').split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
+const li=a=>a.map(p=>`<li><span class="av">${ini(p[0])}</span>${p[0]}<em>${p[1]}</em></li>`).join('');
 document.getElementById('orgList').innerHTML=li(ORG);
 document.getElementById('sciList').innerHTML=li(SCI);
+const TARGET=new Date(2026,11,3,8,30,0);
+let cur='en';
+function tick(){
+  const d=T[cur],box=document.getElementById('cd'),ms=TARGET-new Date();
+  if(ms<=0){box.innerHTML=`<p class="over">${d.over}</p>`;return}
+  const v=[Math.floor(ms/864e5),Math.floor(ms/36e5)%24,Math.floor(ms/6e4)%60,Math.floor(ms/1e3)%60];
+  box.innerHTML='<div class="count">'+['d','h','m','s'].map((k,i)=>`<div><b>${String(v[i]).padStart(2,'0')}</b><span>${d[k]}</span></div>`).join('')+'</div>';
+}
+setInterval(tick,1000);
 function apply(l){
-  const d=T[l];
+  cur=l;const d=T[l];
   document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
   document.querySelectorAll('[data-i]').forEach(e=>e.textContent=d[e.dataset.i]);
   document.querySelectorAll('[data-ih]').forEach(e=>e.innerHTML=d[e.dataset.ih]);
   document.getElementById('tl').innerHTML=PROG.map(r=>r.g?`<div class="grp">${d[r.g]}</div>`:
-    `<div class="row${r.p?' pause':''}"><span class="time">${r.t}</span><h3>${d[r.k]}</h3>${r.s?'<ul>'+r.s.map(x=>`<li>${d[x]}</li>`).join('')+'</ul>':''}</div>`).join('');
+    `<div class="row${r.p?' pause':''}"><span class="t">${r.t}</span><div><h3>${d[r.k]}</h3>${r.s?'<ul>'+r.s.map(x=>`<li>${d[x]}</li>`).join('')+'</ul>':''}</div></div>`).join('');
   document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active',b.dataset.l===l));
   try{localStorage.setItem('mrise-lang',l)}catch(e){}
+  tick();
 }
 document.querySelectorAll('#lang button').forEach(b=>b.onclick=()=>apply(b.dataset.l));
+document.getElementById('cal').onclick=()=>{
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//MRISE Lab//Workshop 2//EN','BEGIN:VEVENT','UID:workshop2-20261203@mrise-lab','DTSTAMP:20261120T000000Z','DTSTART:20261203T083000','DTEND:20261203T150000','SUMMARY:Workshop 2 - Materiaux, polymeres et formulations pour la sante et l\'environnement','LOCATION:Universite de Ain Temouchent Belhadj Bouchaib','END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download='workshop-mrise.ics';a.click();
+};
+const hd=document.getElementById('hd');
+const sc=()=>hd.classList.toggle('solid',scrollY>40);addEventListener('scroll',sc);sc();
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12}):null;
+document.querySelectorAll('.rv').forEach(e=>io?io.observe(e):e.classList.add('in'));
 let L='en';try{L=localStorage.getItem('mrise-lang')||'en'}catch(e){}
 apply(T[L]?L:'en');
 </script>
